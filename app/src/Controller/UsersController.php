@@ -300,11 +300,11 @@ class UsersController extends AppController
      * @param $id
      * @return
      */
-    public function beforeFilter(Event $event)
-    {
-        parent::beforeFilter($event);
-        $this->Auth->allow(['forgotPassword', 'logout']);
-        $this->Auth->allow(['resetPasswordToken', 'logout']);
-    }
+//     public function beforeFilter(Event $event)
+//     {
+//         parent::beforeFilter($event);
+//         $this->Auth->allow(['forgotPassword', 'logout']);
+//         $this->Auth->allow(['resetPasswordToken', 'logout']);
+//     }
 
 }
