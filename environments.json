@@ -8,8 +8,9 @@
         "cpchuy_dir": "/home/vagrant/chuy/",
         "command_prefixes": [],
         "dbname": "chuy",
-        "dbuser": "root",
+        "dbuser": "user",
         "dbpassword": "password",
-        "dbhost": "localhost"
+        "dbhost": "localhost",
+        "exclude": []
     }
 }
