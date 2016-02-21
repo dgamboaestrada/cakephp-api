@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Api\V1;
 
-use App\Controller\Api\v1\AppController;
+use App\Controller\Api\V1\AppController;
 
 /**
  * Users Controller
@@ -48,6 +48,8 @@ class UsersController extends AppController
      */
     public function add()
     {
+        throw new NotFoundException;
+        return;
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
@@ -72,6 +74,8 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        throw new NotFoundException;
+        return;
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
@@ -98,6 +102,8 @@ class UsersController extends AppController
      */
     public function delete($id = null)
     {
+        throw new NotFoundException;
+        return;
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
